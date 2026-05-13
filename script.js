@@ -1,34 +1,26 @@
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
-const navToggle = document.querySelector("[data-nav-toggle]");
+const toggle = document.querySelector("[data-nav-toggle]");
 
-const updateHeader = () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 12);
-};
+function updateHeaderState() {
+  header.classList.toggle("is-scrolled", window.scrollY > 24);
+}
 
-const closeNav = () => {
-  header.classList.remove("nav-active");
-  document.body.classList.remove("nav-open");
-  navToggle.setAttribute("aria-expanded", "false");
-};
-
-navToggle.addEventListener("click", () => {
-  const isOpen = header.classList.toggle("nav-active");
-  document.body.classList.toggle("nav-open", isOpen);
-  navToggle.setAttribute("aria-expanded", String(isOpen));
+toggle.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("is-open");
+  toggle.setAttribute("aria-expanded", String(isOpen));
+  toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  header.classList.toggle("is-open", isOpen);
 });
 
 nav.addEventListener("click", (event) => {
-  if (event.target.matches("a")) {
-    closeNav();
+  if (event.target instanceof HTMLAnchorElement) {
+    nav.classList.remove("is-open");
+    header.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open menu");
   }
 });
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeNav();
-  }
-});
-
-window.addEventListener("scroll", updateHeader, { passive: true });
-updateHeader();
+window.addEventListener("scroll", updateHeaderState, { passive: true });
+updateHeaderState();
