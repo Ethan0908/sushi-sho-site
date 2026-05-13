@@ -15,7 +15,7 @@
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Sushi Sho home">
         <span class="brand-mark">翔</span>
-        <span>Sushi Sho</span>
+        <span class="brand-text">Sushi Sho</span>
       </a>
 
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
@@ -23,141 +23,204 @@
         <span></span>
       </button>
 
-      <nav class="site-nav" data-nav>
+      <nav class="site-nav" data-nav aria-label="Primary navigation">
         <a href="#menu">Menu</a>
         <a href="#experience">Experience</a>
         <a href="#area">Manhattan</a>
-        <a class="nav-cta" href="#contact">Reserve</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Plan a Visit</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Sushi Restaurant · Manhattan</p>
-          <h1 id="hero-title">Sushi Sho</h1>
-          <p class="hero-copy">
-            A polished sample concept for an intimate sushi destination shaped around seasonal fish,
-            careful rice, and a composed omakase rhythm.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#contact">Plan a Visit</a>
-            <a class="button secondary" href="#menu">View Highlights</a>
+        <div class="hero-grid">
+          <div class="hero-content reveal">
+            <p class="eyebrow">Sushi Restaurant · Manhattan</p>
+            <h1 id="hero-title">Sushi Sho</h1>
+            <p class="hero-copy">
+              A clean, modern sample concept for an intimate sushi destination built around seasonal
+              fish, warm rice, restrained hospitality, and the quiet rhythm of the counter.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#contact">Plan a Visit</a>
+              <a class="button secondary" href="#menu">Explore Highlights</a>
+            </div>
           </div>
+
+          <aside class="hero-card reveal" aria-label="Dining snapshot">
+            <p>Dining Snapshot</p>
+            <dl>
+              <div>
+                <dt>Style</dt>
+                <dd>Omakase-led sushi counter</dd>
+              </div>
+              <div>
+                <dt>Setting</dt>
+                <dd>Quiet Manhattan dining</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Seasonal fish and measured pacing</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
-        <aside class="hero-panel" aria-label="Restaurant highlights">
-          <span>Omakase-led counter</span>
-          <span>Seasonal preparations</span>
-          <span>Manhattan dining</span>
-        </aside>
+      </section>
+
+      <section class="intro-strip" aria-label="Restaurant qualities">
+        <span>Seasonal nigiri</span>
+        <span>Counter service</span>
+        <span>Composed small plates</span>
+        <span>Manhattan access</span>
       </section>
 
       <section class="section menu-section" id="menu" aria-labelledby="menu-title">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">Menu Highlights</p>
-          <h2 id="menu-title">Precise courses, clean flavors, quiet detail.</h2>
+          <h2 id="menu-title">A focused progression of fish, rice, and exacting detail.</h2>
+          <p>
+            This unofficial concept presents a concise dining story: classic technique, seasonal
+            preparation, and a restrained visual language suited to a high-end sushi experience.
+          </p>
         </div>
+
         <div class="menu-grid">
-          <article class="menu-card">
+          <article class="menu-card reveal">
             <img
-              src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=900&q=80"
+              src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=900&q=82"
               alt="Assorted nigiri arranged on a dark plate"
             />
             <div>
+              <p class="card-kicker">Signature</p>
               <h3>Seasonal Nigiri</h3>
-              <p>Balanced fish, temperature, and rice for a focused progression of classic pieces.</p>
+              <p>Clean cuts, tuned seasoning, and rice served at the right temperature for each piece.</p>
             </div>
           </article>
-          <article class="menu-card">
+
+          <article class="menu-card reveal">
             <img
-              src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=900&q=80"
-              alt="Chef preparing sushi at a counter"
+              src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=900&q=82"
+              alt="Chef preparing sushi behind a counter"
             />
             <div>
-              <h3>Counter Omakase</h3>
-              <p>A chef-led meal with measured pacing, restrained seasoning, and close attention to texture.</p>
+              <p class="card-kicker">Counter</p>
+              <h3>Omakase Rhythm</h3>
+              <p>A chef-led meal shaped by timing, texture, temperature, and a natural course flow.</p>
             </div>
           </article>
-          <article class="menu-card">
+
+          <article class="menu-card reveal">
             <img
-              src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=900&q=80"
-              alt="Sushi rolls and sashimi on ceramic plates"
+              src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=900&q=82"
+              alt="Sushi rolls and sashimi arranged on ceramic plates"
             />
             <div>
+              <p class="card-kicker">Seasonal</p>
               <h3>Composed Plates</h3>
-              <p>Small preparations that frame the season through broth, grilled fish, vegetables, and garnish.</p>
+              <p>Small preparations with broth, grilled fish, vegetables, and quiet finishing touches.</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section split-section" id="experience" aria-labelledby="experience-title">
-        <div class="experience-image" aria-hidden="true"></div>
-        <div class="experience-copy">
+      <section class="section feature-section" id="experience" aria-labelledby="experience-title">
+        <div class="feature-image reveal" aria-hidden="true"></div>
+        <div class="feature-copy reveal">
           <p class="eyebrow">Why Choose Us</p>
-          <h2 id="experience-title">Designed for guests who value restraint and craft.</h2>
+          <h2 id="experience-title">Built for guests who notice restraint, craft, and service.</h2>
           <div class="reason-list">
-            <div class="reason">
+            <article class="reason">
               <span>01</span>
               <div>
                 <h3>Focused Atmosphere</h3>
-                <p>A calm, counter-forward setting keeps attention on the meal and the conversation.</p>
+                <p>A calm counter-forward room keeps attention on the meal, the chef, and the conversation.</p>
               </div>
-            </div>
-            <div class="reason">
+            </article>
+            <article class="reason">
               <span>02</span>
               <div>
                 <h3>Ingredient Respect</h3>
-                <p>Minimal handling lets each cut, garnish, and grain of rice carry its own role.</p>
+                <p>Minimal handling lets each cut, garnish, and grain of rice carry a clear purpose.</p>
               </div>
-            </div>
-            <div class="reason">
+            </article>
+            <article class="reason">
               <span>03</span>
               <div>
-                <h3>Seamless Service</h3>
-                <p>Reservations, arrival, seating, and course pacing are presented with quiet clarity.</p>
+                <h3>Quietly Polished Service</h3>
+                <p>Arrival, seating, beverage pacing, and course timing are framed with calm precision.</p>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="section area-section" id="area" aria-labelledby="area-title">
-        <div>
+        <div class="area-copy reveal">
           <p class="eyebrow">Service Area</p>
-          <h2 id="area-title">Serving Manhattan diners and visitors.</h2>
+          <h2 id="area-title">Serving Manhattan diners, visitors, and special occasions.</h2>
+          <p>
+            This sample site positions Sushi Sho for guests seeking a refined sushi experience in
+            Manhattan, with language suited to destination dining, neighborhood dinners, and private
+            celebrations.
+          </p>
         </div>
-        <p>
-          This sample site positions Sushi Sho for guests seeking a refined sushi experience in Manhattan,
-          with easy access for neighborhood dinners, special occasions, and destination dining.
-        </p>
-        <div class="area-pills" aria-label="Nearby areas">
-          <span>Midtown</span>
-          <span>Flatiron</span>
-          <span>SoHo</span>
-          <span>Upper East Side</span>
-          <span>West Village</span>
+        <div class="area-panel reveal">
+          <h3>Nearby Manhattan Areas</h3>
+          <div class="area-pills" aria-label="Nearby areas">
+            <span>Midtown</span>
+            <span>Flatiron</span>
+            <span>SoHo</span>
+            <span>West Village</span>
+            <span>Upper East Side</span>
+            <span>Tribeca</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section visit-section" aria-labelledby="visit-title">
+        <div class="visit-copy reveal">
+          <p class="eyebrow">The Visit</p>
+          <h2 id="visit-title">A composed evening, from arrival to the final piece.</h2>
+        </div>
+        <div class="visit-steps">
+          <article class="visit-step reveal">
+            <span>Arrive</span>
+            <p>Guests are welcomed into a quiet room designed around the counter and the pace of service.</p>
+          </article>
+          <article class="visit-step reveal">
+            <span>Dine</span>
+            <p>Courses move from lighter preparations into richer cuts, warm rice, and seasonal accents.</p>
+          </article>
+          <article class="visit-step reveal">
+            <span>Close</span>
+            <p>The meal resolves with a restrained finish and a clear path for future reservations.</p>
+          </article>
         </div>
       </section>
 
       <section class="cta-section" id="contact" aria-labelledby="contact-title">
-        <div>
+        <div class="cta-content reveal">
           <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Reserve an intimate sushi experience in Manhattan.</h2>
+          <h2 id="contact-title">Plan an intimate sushi experience in Manhattan.</h2>
           <p>
-            Phone details were not provided in the brief. This concept can point guests toward an online
-            reservation flow or direct inquiry once official contact details are available.
+            Phone details were not provided in the brief. This static concept can direct guests to the
+            current website or an official reservation flow once contact details are available.
           </p>
         </div>
-        <a class="button primary" href="https://www.sushi-sho.com/" target="_blank" rel="noreferrer">
-          Visit Current Website
-        </a>
+        <div class="cta-actions reveal">
+          <a class="button primary" href="https://www.sushi-sho.com/" target="_blank" rel="noreferrer">
+            Visit Current Website
+          </a>
+          <a class="button secondary dark" href="mailto:reservations@example.com">Inquiry Email</a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>Unofficial sample website concept.</p>
+      <a href="#top">Back to top</a>
     </footer>
 
     <script src="script.js"></script>
